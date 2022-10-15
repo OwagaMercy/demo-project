@@ -12,4 +12,5 @@ class country extends Model
         'id', 
         'title'
     ];
+   
 }

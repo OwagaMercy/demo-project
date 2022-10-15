@@ -14,13 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-         // All Projects
-       $projects = PProjects::all();
-     
-       // Return Json Response
-       return response()->json([
-          'projects' => $projects
-       ],200);
+        
     }
 
     /**
@@ -41,29 +35,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $imageName = Str::random(32).".".$request->image->getClientOriginalExtension();
-     
-            // Create Product
-            Projects:create([
-                'name' => $request->name,
-                'image' => $imageName,
-                'description' => $request->description
-            ]);
-     
-            // Save Image in Storage folder
-            Storage::disk('public')->put($imageName, file_get_contents($request->image));
-     
-            // Return Json Response
-            return response()->json([
-                'message' => "Product successfully created."
-            ],200);
-        } catch (\Exception $e) {
-            // Return Json Response
-            return response()->json([
-                'message' => "Something went really wrong!"
-            ],500);
-        }
+       
     }
 
     /**
@@ -74,7 +46,11 @@ class ProjectController extends Controller
      */
     public function show(project $project)
     {
-        //
+        $project = $project::find();
+        if (is_null($project)) {
+            return $this->handleError('$project not found!');
+        }
+        return $this->handleResponse(new project($project), '$project view.');
     }
 
     /**
@@ -97,7 +73,24 @@ class ProjectController extends Controller
      */
     public function update(Request $request, project $project)
     {
-        //
+        
+            $input = $request->all();
+     
+            $validator = Validator::make($input, [
+                'name' => 'required',
+                'details' => 'required'
+            ]);
+     
+            if($validator->fails()){
+                return $this->handleError($validator->errors());       
+            }
+     
+            $project->name = $input['name'];
+            $project->details = $input['details'];
+            $project->save();
+             
+            return $this->handleResponse(new project($project), 'project successfully updated!');
+        
     }
 
     /**
@@ -110,4 +103,5 @@ class ProjectController extends Controller
     {
         //
     }
+
 }

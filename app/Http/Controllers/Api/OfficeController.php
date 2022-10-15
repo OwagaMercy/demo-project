@@ -15,7 +15,7 @@ class OfficeController extends Controller
     public function index()
     {
         //
-        retun v
+        
     }
 
     /**
