@@ -83,6 +83,11 @@ class CountrySeeder extends Seeder
             [
                 'name' => 'Uganda',
                 'project_id'=> Project::query()->where("reference", "GHA-RS-001")->firstOrFail()->id,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Uganda',
                 'project_id'=> Project::query()->where("reference", "TON-RS-002")->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -138,6 +143,11 @@ class CountrySeeder extends Seeder
             [
                 'name' => 'Mogolia',
                 'project_id'=> Project::query()->where("reference", "MNG-RS-004")->firstOrFail()->id,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Mogolia',
                 'project_id'=> Project::query()->where("reference", "MNG-RS-003")->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -151,6 +161,11 @@ class CountrySeeder extends Seeder
             [
                 'name' => 'Myanmar',
                 'project_id'=> Project::query()->where("reference", "MMR-RS-002")->firstOrFail()->id,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Myanmar',
                 'project_id'=> Project::query()->where("reference", "MMR-RS-001")->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -188,6 +203,11 @@ class CountrySeeder extends Seeder
             [
                 'name' => 'Swaziland',
                 'project_id'=> Project::query()->where("reference", "SWZ-RS-002")->firstOrFail()->id,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Swaziland',
                 'project_id'=> Project::query()->where("reference", "SWZ-RS-003")->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -212,8 +232,13 @@ class CountrySeeder extends Seeder
             ],
             [
                 'name' => 'Zimbabwe',
-                'project_id'=> Project::query()->where("reference", "ZWE-RS-002")->firstOrFail()->id,
                 'project_id'=> Project::query()->where("reference", "ZWE-RS-001")->firstOrFail()->id,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Zimbabwe',
+                'project_id'=> Project::query()->where("reference", "ZWE-RS-002")->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

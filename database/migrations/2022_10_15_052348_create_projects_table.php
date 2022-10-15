@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('status_id');
             $table->string('start_date');
             $table->string('end_date');
+            $table->string('duration');
             $table->timestamps();
         });
     }

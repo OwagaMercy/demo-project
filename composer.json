@@ -10,7 +10,6 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "laravel/laravel": "^9.0 laravel9-bootstrap5-vite",
         "laravel/ui": "^4.0"
     },
     "require-dev": {
