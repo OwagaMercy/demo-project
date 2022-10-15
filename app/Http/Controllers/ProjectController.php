@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
+use App\Models\Country;
+use App\Models\Status;
+use Illuminate\Support\Facades\Request;
 
 class ProjectController extends Controller
 {
@@ -15,72 +18,32 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        return Project::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function projectsByCountry(Request $request)
     {
-        //
+        try {
+            return response()->json([
+                "projects" => Country::query()->where("name", $request->country_name)->firstOrFail()->projects
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                "message" => "Region Not Found"
+            ], 404);
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreProjectRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreProjectRequest $request)
+    public function projetsByStatus(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Project  $project
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Project $project)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Project  $project
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Project $project)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateProjectRequest  $request
-     * @param  \App\Models\Project  $project
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateProjectRequest $request, Project $project)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Project  $project
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Project $project)
-    {
-        //
+        try {
+            return response()->json([
+                "projects" => Project::query()->where("status_id", Status::query()->where("name", $request->status)->firstOrFail()->id)->get(),
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                "message" => "Region Not Found"
+            ], 404);
+        }
     }
 }

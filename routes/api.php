@@ -16,12 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // projects
-Route::get('project/all', [projectController::class, 'all']);
-Route::get('project/country/{country_name}', [projectController::class, 'country']);
-Route::get('project/status/{completed}', [projectController::class, 'status']);
-
-
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('project/all', [ProjectController::class, 'index']);
+Route::get('project/country/{country_name}', [ProjectController::class, 'projectsByCountry']);
+Route::get('project/status/{status}', [ProjectController::class, 'projetsByStatus']);
