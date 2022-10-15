@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Office extends FormRequest
+class UpdateReadinessRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class Office extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,9 +24,7 @@ class Office extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required',
-            'title' => 'required',
-            'country_ref_id' => 'required'
+            //
         ];
     }
 }

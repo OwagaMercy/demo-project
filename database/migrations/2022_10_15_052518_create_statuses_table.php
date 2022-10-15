@@ -13,16 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('statuses', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('grant_amount');
-            $table->string('date_GCF');
-            $table->string('start_date');
-            $table->string('end_date');
-            $table->string('readiness_ref_id');
-            $table->string('status_ref_id');
-            $table->string('office_ref_id');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }
@@ -34,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('statuses');
     }
 };

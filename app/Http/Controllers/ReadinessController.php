@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\status;
-use Illuminate\Http\Request;
+use App\Models\Readiness;
+use App\Http\Requests\StoreReadinessRequest;
+use App\Http\Requests\UpdateReadinessRequest;
 
-class StatusController extends Controller
+class ReadinessController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,10 +31,10 @@ class StatusController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreReadinessRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreReadinessRequest $request)
     {
         //
     }
@@ -41,10 +42,10 @@ class StatusController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\status  $status
+     * @param  \App\Models\Readiness  $readiness
      * @return \Illuminate\Http\Response
      */
-    public function show(status $status)
+    public function show(Readiness $readiness)
     {
         //
     }
@@ -52,10 +53,10 @@ class StatusController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\status  $status
+     * @param  \App\Models\Readiness  $readiness
      * @return \Illuminate\Http\Response
      */
-    public function edit(status $status)
+    public function edit(Readiness $readiness)
     {
         //
     }
@@ -63,11 +64,11 @@ class StatusController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\status  $status
+     * @param  \App\Http\Requests\UpdateReadinessRequest  $request
+     * @param  \App\Models\Readiness  $readiness
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, status $status)
+    public function update(UpdateReadinessRequest $request, Readiness $readiness)
     {
         //
     }
@@ -75,10 +76,10 @@ class StatusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\status  $status
+     * @param  \App\Models\Readiness  $readiness
      * @return \Illuminate\Http\Response
      */
-    public function destroy(status $status)
+    public function destroy(Readiness $readiness)
     {
         //
     }

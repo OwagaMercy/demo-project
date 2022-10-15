@@ -26,7 +26,8 @@
   "bugs": {
     "url": "https://github.com/OwagaMercy/demo-project/issues"
   },
-  "homepage": "https://github.com/OwagaMercy/demo-project#readme"
-
-
+  "homepage": "https://github.com/OwagaMercy/demo-project#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1"
+  }
 }

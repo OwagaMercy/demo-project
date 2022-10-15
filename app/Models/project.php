@@ -2,37 +2,32 @@
 
 namespace App\Models;
 
+use App\Http\Requests\Status;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class project extends Model
+class Project extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'id', 
-        'title',
-        'grant_amount',
-        'date_GCF',
-        'start_date', 
-        'end_date', 
-        'readiness_ref_id',
-        'staus_ref_id',
-        'office_ref_id'
-    ];
 
-    public function status() :BelongsTo {
-        return $this->belongsTo(status::class, 'status_ref_id');
-}
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 
+    public function readinessType()
+    {
+        return $this->belongsTo(ReadinessType::class);
+    }
 
-public function readiness() :BelongsTo {
-    return $this->belongsTo(readiness::class, 'readiness_ref_id');
-}
+    public function countries()
+    {
+        return $this->hasMany(Country::class);
+    }
 
-public function office() :BelongsTo {
-    return $this->belongsTo(office::class, 'office_ref_id');
-}
-
+    public function office()
+    {
+        return $this->belongsTo(Office::class);
+    }
 
 }

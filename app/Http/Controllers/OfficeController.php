@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Readiness;
-use Illuminate\Http\Request;
+use App\Models\Office;
+use App\Http\Requests\StoreOfficeRequest;
+use App\Http\Requests\UpdateOfficeRequest;
 
-class ReadinessController extends Controller
+class OfficeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,10 +31,10 @@ class ReadinessController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreOfficeRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreOfficeRequest $request)
     {
         //
     }
@@ -41,10 +42,10 @@ class ReadinessController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Readiness  $readiness
+     * @param  \App\Models\Office  $office
      * @return \Illuminate\Http\Response
      */
-    public function show(Readiness $readiness)
+    public function show(Office $office)
     {
         //
     }
@@ -52,10 +53,10 @@ class ReadinessController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Readiness  $readiness
+     * @param  \App\Models\Office  $office
      * @return \Illuminate\Http\Response
      */
-    public function edit(Readiness $readiness)
+    public function edit(Office $office)
     {
         //
     }
@@ -63,11 +64,11 @@ class ReadinessController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Readiness  $readiness
+     * @param  \App\Http\Requests\UpdateOfficeRequest  $request
+     * @param  \App\Models\Office  $office
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Readiness $readiness)
+    public function update(UpdateOfficeRequest $request, Office $office)
     {
         //
     }
@@ -75,10 +76,10 @@ class ReadinessController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Readiness  $readiness
+     * @param  \App\Models\Office  $office
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Readiness $readiness)
+    public function destroy(Office $office)
     {
         //
     }

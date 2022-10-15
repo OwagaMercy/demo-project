@@ -13,24 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/submit/customer', [projectController::class,'customer_details']);
-Route::post('/submit/biz', [projectController::class,'business_owner_info']);
-Route::post('/submit/agent', [projectController::class,'agents']);
-
-
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/index', function () {
-    return view('index');
-});
-
-Route::get('/form', function () {
-    return view('form');
-});
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

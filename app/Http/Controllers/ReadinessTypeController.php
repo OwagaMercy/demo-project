@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\country;
-use Illuminate\Http\Request;
+use App\Models\ReadinessType;
+use App\Http\Requests\StoreReadinessTypeRequest;
+use App\Http\Requests\UpdateReadinessTypeRequest;
 
-class CountryController extends Controller
+class ReadinessTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,10 +31,10 @@ class CountryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreReadinessTypeRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreReadinessTypeRequest $request)
     {
         //
     }
@@ -41,10 +42,10 @@ class CountryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\country  $country
+     * @param  \App\Models\ReadinessType  $readinessType
      * @return \Illuminate\Http\Response
      */
-    public function show(country $country)
+    public function show(ReadinessType $readinessType)
     {
         //
     }
@@ -52,10 +53,10 @@ class CountryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\country  $country
+     * @param  \App\Models\ReadinessType  $readinessType
      * @return \Illuminate\Http\Response
      */
-    public function edit(country $country)
+    public function edit(ReadinessType $readinessType)
     {
         //
     }
@@ -63,11 +64,11 @@ class CountryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\country  $country
+     * @param  \App\Http\Requests\UpdateReadinessTypeRequest  $request
+     * @param  \App\Models\ReadinessType  $readinessType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, country $country)
+    public function update(UpdateReadinessTypeRequest $request, ReadinessType $readinessType)
     {
         //
     }
@@ -75,10 +76,10 @@ class CountryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\country  $country
+     * @param  \App\Models\ReadinessType  $readinessType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(country $country)
+    public function destroy(ReadinessType $readinessType)
     {
         //
     }
