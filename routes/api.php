@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // projects
 Route::get('project/all', [ProjectController::class, 'index']);
 Route::get('project/country/{country_name}', [ProjectController::class, 'projectsByCountry']);
-Route::get('project/status/{completed}', [projectController::class, 'status']);
+Route::get('project/status/{status}', [ProjectController::class, 'projetsByStatus']);
 
 
 
