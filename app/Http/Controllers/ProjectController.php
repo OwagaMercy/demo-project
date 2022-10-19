@@ -15,7 +15,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        return view('project');
     }
 
     /**
@@ -83,4 +83,18 @@ class ProjectController extends Controller
     {
         //
     }
+    public function createProject(StoreProjectRequest $request){
+        $payload = $request->all();
+        $project = Project::create($payload);
+        return response()->json([
+            "success" => true,
+            "status" => 0,
+            "message" => "project added successfully",
+            "data" => $project = Project::create($payload),
+        ]);
+    }
+
+    
 }
+
+
