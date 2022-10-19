@@ -27,10 +27,6 @@ return new class extends Migration
             $table->string('start_date');
             $table->string('end_date');
             $table->string('duration');
-<<<<<<< HEAD
-
-=======
->>>>>>> 9d702f0b52f87924c54d846dcc311a18ef24c54c
             $table->timestamps();
         });
     }
