@@ -18,11 +18,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
         return view('project');
-=======
         return Project::all();
->>>>>>> 9d702f0b52f87924c54d846dcc311a18ef24c54c
     }
 
     public function projectsByCountry(Request $request)
