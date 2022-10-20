@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/project',[ProjectController::class,'index']);
+
+Route::get('/', function () {
+    return view('trial');
+});

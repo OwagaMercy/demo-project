@@ -270,7 +270,7 @@ $(document).ready(function(){
 			<div class="table-title">
 				<div class="row">
 					<div class="col-sm-6">
-						<h2>Manage <b>Employees</b></h2>
+						<h2>Manage <b>project</b></h2>
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
@@ -287,11 +287,19 @@ $(document).ready(function(){
 								<label for="selectAll"></label>
 							</span>
 						</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Address</th>
-						<th>Phone</th>
-						<th>Actions</th>
+						<th>Project Reference Number</th>
+                        <th>Project Name</th>
+                        <th>Grant Amount</th>
+                        <th>Office Implementation</th>
+                        <th>Date GCF</th>
+                        <th>Country</th>
+                        <th>Readiness</th>
+                        <th>Readiness Type</th>
+                        <th>Status</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Duration</th>
+                        <th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -436,23 +444,59 @@ $(document).ready(function(){
 					<h4 class="modal-title">Edit Employee</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">					
+				<div class="modal-body">
+                <div class="form-group">
+						<label>Project Reference Number</label>
+						<input type="text" class="form-control" required>
+					</div>
+                    <div class="form-group">
+						<label>Project Name</label>
+						<input type="text" class="form-control" required>
+					</div>					
 					<div class="form-group">
-						<label>Name</label>
+						<label>Grant Amount</label>
 						<input type="text" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Email</label>
+						<label>Office Implementation </label>
 						<input type="email" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Address</label>
+						<label>Date GCF</label>
 						<textarea class="form-control" required></textarea>
 					</div>
 					<div class="form-group">
-						<label>Phone</label>
+						<label>Country</label>
 						<input type="text" class="form-control" required>
-					</div>					
+					</div>		
+                    <div class="form-group">
+						<label>Readiness</label>
+						<input type="text" class="form-control" required>
+					</div>
+                    <div class="form-group">
+						<label>ReadinessType</label>
+						<input type="text" class="form-control" required>
+					</div>	
+                    <div class="form-group">
+						<label>Status</label>
+						<input type="text" class="form-control" required>
+					</div>	
+                    <div class="form-group">
+						<label>Start Date</label>
+						<input type="text" class="form-control" required>
+					</div>
+                    <div class="form-group">
+						<label>End Date</label>
+						<input type="text" class="form-control" required>
+					</div>		
+                    <div class="form-group">
+						<label>Duration</label>
+						<input type="text" class="form-control" required>
+					</div>
+                    <div class="form-group">
+						<label>Actions</label>
+						<input type="text" class="form-control" required>
+					</div>	
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -468,7 +512,7 @@ $(document).ready(function(){
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Delete Employee</h4>
+					<h4 class="modal-title">Delete project</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
