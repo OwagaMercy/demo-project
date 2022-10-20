@@ -18,16 +18,20 @@ class CountrySeeder extends Seeder
     {
         Country::truncate();
 
-        $countries =  [
+        $countries = [
             [
                 'name' => 'Albania',
-                'project_id'=> Project::query()->where("reference", "ALB-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Romania',
-                'project_id'=> Project::query()->where("reference", "ALB-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
@@ -40,121 +44,161 @@ class CountrySeeder extends Seeder
             ],
             [
                 'name' => 'Panama',
-                'project_id'=> Project::query()->where("reference", "BRA-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Comoros',
-                'project_id'=> Project::query()->where("reference", "COM-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Costa Rica',
-                'project_id'=> Project::query()->where("reference", "CRI-RS-002")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Dominican Republic',
-                'project_id'=> Project::query()->where("reference", "DOM-RS-002")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Morocco',
-                'project_id'=> Project::query()->where("reference", "EGY-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Egypt',
-                'project_id'=> Project::query()->where("reference", "EGY-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Ghana',
-                'project_id'=> Project::query()->where("reference", "GHA-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Uganda',
-                'project_id'=> Project::query()->where("reference", "GHA-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Uganda',
-                'project_id'=> Project::query()->where("reference", "TON-RS-002")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Sudan',
-                'project_id'=> Project::query()->where("reference", "GHA-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Honduras',
-                'project_id'=> Project::query()->where("reference", "HND-RS-002")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Jordan',
-                'project_id'=> Project::query()->where("reference", "JOR-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Malaysia',
                 'created_at' => Carbon::now(),
-                'project_id'=> Project::query()->where("reference", "MDG-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Madgascar',
-                'project_id'=> Project::query()->where("reference", "MLY-RS-002")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Maldives',
-                'project_id'=> Project::query()->where("reference", "MDV-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Mauritania ',
-                'project_id'=> Project::query()->where("reference", "MRT-RS-002")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Mauritius',
-                'project_id'=> Project::query()->where("reference", "MUS-RS-002")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Mogolia',
-                'project_id'=> Project::query()->where("reference", "MNG-RS-004")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Mogolia',
-                'project_id'=> Project::query()->where("reference", "MNG-RS-003")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'Montenegro',
-                'project_id'=> Project::query()->where("reference", "MNE-RS-001")->firstOrFail()->id,
+                'project_id' => Project::query()
+                    ->where('reference', 'ALB-RS-001')
+                    ->firstOrFail()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
@@ -265,5 +309,4 @@ class CountrySeeder extends Seeder
 
         Country::insert($countries);
     }
-    
 }

@@ -9,12 +9,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
 <body>
-
+    
 
     <div class="container">
-        
-       @foreach ($projects as $proj)
-       echo(proj)
+
         <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
@@ -34,20 +32,22 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
+                @foreach($projects as $project)
                 <tbody>
-                        <td>1</td>
-                        <td>ALB-RS-001</td>
-                        <td>Readiness support to Albania</td>
-                        <td>300,00 usd</td>
-                        <td>Europe Office</td>
-                        <td>11/15/2016</td>
-                        <td>Albania, Romania</td>
-                        <td>Readiness</td>
-                        <td>Capacity Building</td>
-                        <td>Completed</td>
-                        <td>8/30/2016</td>
-                        <td>8/30/2017</td>
-                        <td>12</td>
+                        <td>{{$project->id}}</td>
+                        <td>{{$project->reference}}</td>
+                        <td>{{$project->name}}</td>
+                        <td>{{$project->grant_amount}}</td>
+                        <td>{{$project->office->name}}</td>
+                        <td>{{$project->date_gcf}}</td>
+                        <td>{{'albania'}}</td>
+                        <td>{{$project->readiness}}</td>
+                        <td>{{$project->readinessType->name}}</td>
+                        <td>{{$project->status->name}}</td>
+                        <td>{{$project->start_date}}</td>
+                        <td>{{$project->end_date}}</td>
+                        <td>{{$project->duration}}</td>
+                        
                         
                         <td><div class="d-flex flex-row mb-3">
                 <div ><button type="button" class="btn">
@@ -59,6 +59,7 @@
               </div></td>
                      
                 </tbody>
+                @endforeach
                 <tfoot>
                     <tr>
                     <th>ID</th>
@@ -78,7 +79,7 @@
                     </tr>
                 </tfoot>
         </table>
-        @endforeach
+    
     </div>
     
 </body>
@@ -86,8 +87,14 @@
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script>
+      var data = '<?= $projects ?>';
+
+      console.log(data);
+
+
     $(document).ready(function () {
     $('#example').DataTable();
+
 });
 </script>
 </html>

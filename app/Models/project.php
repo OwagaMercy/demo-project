@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Http\Requests\Status;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,5 +28,4 @@ class Project extends Model
     {
         return $this->belongsTo(Office::class);
     }
-
 }
